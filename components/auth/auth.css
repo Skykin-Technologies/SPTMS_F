@@ -1,0 +1,105 @@
+/* Auth Form Styles */
+
+/* Form spacing - reduced spacing */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem; /* 20px spacing between form fields */
+}
+
+.auth-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* 8px - spacing between label and input */
+}
+
+/* Social login buttons - side by side */
+.auth-social-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem; /* 12px gap between buttons */
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 640px) {
+  .auth-social-buttons {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Input field spacing */
+.auth-input-wrapper {
+  position: relative;
+}
+
+.auth-input-icon {
+  position: absolute;
+  left: 0.75rem; /* 12px */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: hsl(var(--muted-foreground));
+}
+
+.auth-input {
+  padding-left: 2.5rem; /* 40px - space for icon */
+  padding-right: 2.5rem; /* 40px - space for password toggle */
+}
+
+.auth-input-password {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+/* Form item spacing - reduced */
+.auth-form-item {
+  margin-bottom: 0;
+}
+
+.auth-form-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Welcome section spacing */
+.auth-welcome-section {
+  margin-bottom: 2rem; /* 32px - distance between welcome text and form */
+}
+
+/* Label with icon spacing */
+.auth-label-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* 8px padding between icon and label text */
+}
+
+/* Label to input spacing */
+.auth-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* 8px distance between label and input box */
+}
+
+/* Blue links */
+.auth-link-blue {
+  color: #3b82f6; /* Blue color */
+  text-decoration: none;
+}
+
+.auth-link-blue:hover {
+  color: #2563eb; /* Darker blue on hover */
+  text-decoration: underline;
+}
+
+/* Social login buttons styling */
+.auth-social-buttons button {
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  font-weight: 500;
+}
+
+.auth-social-buttons button:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+

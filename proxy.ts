@@ -8,7 +8,7 @@ export function proxy(request: NextRequest) {
   const isAuthRoute = request.nextUrl.pathname.startsWith("/auth/");
 
   if (!token && !isAuthRoute) {
-    const loginUrl = new URL("/auth/login", request.url);
+    const loginUrl = new URL("/auth/sign-in", request.url);
     loginUrl.searchParams.set("redirectTo", request.nextUrl.pathname);
     return NextResponse.redirect(loginUrl);
   }
